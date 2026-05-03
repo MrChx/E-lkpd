@@ -1,9 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Volume2, Info, X, User, GraduationCap } from "lucide-react";
+import { X, User, GraduationCap } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
@@ -32,7 +31,7 @@ export default function Home() {
     router.push("/petunjuk");
   };
   return (
-    <main className="relative w-full h-screen bg-green-50 overflow-hidden font-fredoka flex flex-col items-center justify-center">
+    <main className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-x-hidden bg-green-50 px-4 py-8 font-fredoka sm:px-6 md:py-12">
       {/* Background Image Container */}
       <div className="absolute inset-0 z-0">
         <Image 
@@ -45,41 +44,31 @@ export default function Home() {
       </div>
 
       {/* Main Content Container */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 flex flex-col items-center">
+      <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-col items-center">
         
         {/* Title Area */}
-        <div className="text-center mb-12 flex flex-col items-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-green-900 tracking-wider mb-[-10px] text-stroke-sm drop-shadow-md z-20">
+        <div className="mb-10 flex w-full max-w-4xl flex-col items-center text-center md:mb-12">
+          <h2 className="z-20 mb-1 text-lg font-bold tracking-[0.18em] text-green-900 text-stroke-sm drop-shadow-md sm:text-2xl md:mb-[-6px] md:text-3xl">
             E-LKPD INTERAKTIF
           </h2>
-          <h1 className="text-6xl md:text-8xl font-black text-green-700 tracking-wide text-stroke-white drop-shadow-xl">
+          <h1 className="w-full px-2 text-center text-[clamp(2.7rem,13vw,7rem)] font-black leading-[0.9] tracking-[0.04em] text-green-700 text-stroke-white drop-shadow-xl sm:tracking-[0.08em]">
             FOTOSINTESIS
           </h1>
         </div>
 
         {/* Text Box */}
-        <div className="bg-white/95 backdrop-blur-sm border-2 border-green-200 shadow-xl rounded-3xl py-6 px-8 max-w-lg text-center mb-10 transform hover:scale-105 transition-transform duration-300">
-          <p className="text-xl md:text-2xl font-quicksand font-bold text-slate-700 leading-relaxed">
+        <div className="mb-10 w-full max-w-xl rounded-[2rem] border-2 border-green-200 bg-white/95 px-6 py-6 text-center shadow-xl backdrop-blur-sm transition-transform duration-300 hover:scale-[1.02] sm:px-8">
+          <p className="font-quicksand text-lg font-bold leading-relaxed text-slate-700 sm:text-xl md:text-2xl">
             Belajar fotosintesis lebih mudah dan menyenangkan dengan simulasi interaktif!
           </p>
         </div>
 
         {/* Play Button */}
-        <button onClick={handleMulai} className="bg-gradient-to-b from-green-400 to-green-600 hover:from-green-300 hover:to-green-500 text-white font-black text-3xl md:text-4xl py-4 px-16 rounded-full border-4 border-white btn-3d tracking-wider transform transition-all inline-block">
+        <button
+          onClick={handleMulai}
+          className="inline-block rounded-full border-4 border-white bg-gradient-to-b from-green-400 to-green-600 px-10 py-4 text-2xl font-black tracking-[0.16em] text-white transition-all hover:from-green-300 hover:to-green-500 sm:px-14 sm:text-3xl md:text-4xl"
+        >
           MULAI
-        </button>
-      </div>
-
-      {/* Bottom Floating Buttons */}
-      <div className="absolute bottom-6 left-6 z-20">
-        <button className="bg-green-900/60 hover:bg-green-800/80 backdrop-blur-sm text-white p-4 rounded-full border-2 border-white/70 btn-3d-circle transition-all">
-          <Volume2 size={32} />
-        </button>
-      </div>
-
-      <div className="absolute bottom-6 right-6 z-20">
-        <button className="bg-green-900/60 hover:bg-green-800/80 backdrop-blur-sm text-white p-4 rounded-full border-2 border-white/70 btn-3d-circle transition-all">
-          <Info size={32} />
         </button>
       </div>
 

@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { Home, ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import "./simulasi.css";
 
 // Sub-components for detail screens
@@ -247,24 +247,16 @@ export default function SimulasiPage() {
         </div>
       </div>
 
-      {/* Navigation Buttons (Bottom Corners) */}
-      <div className="absolute bottom-4 left-4 md:bottom-6 md:left-6 z-50">
-        <Link 
-          href="/apersepsi" 
-          className="flex items-center justify-center bg-green-600 hover:bg-green-500 text-white p-3 md:p-4 rounded-full border-4 border-white btn-3d-circle transition-all"
-        >
-          <ArrowLeft size={28} strokeWidth={3} />
-        </Link>
-      </div>
-
-      <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 z-50">
-        <Link 
-          href="/analisis" 
-          className="flex items-center justify-center bg-green-600 hover:bg-green-500 text-white p-3 md:p-4 rounded-full border-4 border-white btn-3d-circle transition-all"
-        >
-          <ArrowRight size={28} strokeWidth={3} />
-        </Link>
-      </div>
+      {screen === "main" && (
+        <div className="sim-route-nav">
+          <Link href="/apersepsi" aria-label="Kembali ke Apersepsi" className="sim-route-link">
+            <ArrowLeft size={28} strokeWidth={3} />
+          </Link>
+          <Link href="/analisis" aria-label="Lanjut ke Analisis" className="sim-route-link sim-route-link-next">
+            <ArrowRight size={28} strokeWidth={3} />
+          </Link>
+        </div>
+      )}
 
       {/* ===== DETAIL SCREENS ===== */}
       <TerangScreen active={screen === "terang"} onBack={() => setScreen("main")} />
