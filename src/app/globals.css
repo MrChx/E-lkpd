@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-fredoka: var(--font-fredoka);
+  --font-quicksand: var(--font-quicksand);
+}
+
+:root {
+  --background: #f0fdf4;
+  --foreground: #064e3b;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 4px white;
+  paint-order: stroke fill;
+}
+
+.text-stroke-green {
+  -webkit-text-stroke: 2px #065f46;
+  paint-order: stroke fill;
+}
+
+.text-stroke-sm {
+  -webkit-text-stroke: 2px white;
+  paint-order: stroke fill;
+}
+
+/* 3D Button style */
+.btn-3d {
+  box-shadow: 0 6px 0 0 #14532d, 0 10px 10px 0 rgba(0,0,0,0.3);
+  transition: all 0.1s ease;
+}
+
+.btn-3d:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 0 #14532d, 0 4px 4px 0 rgba(0,0,0,0.3);
+}
+
+.btn-3d-circle {
+  box-shadow: 0 4px 0 0 #064e3b, 0 6px 6px 0 rgba(0,0,0,0.3);
+  transition: all 0.1s ease;
+}
+
+.btn-3d-circle:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 #064e3b, 0 3px 3px 0 rgba(0,0,0,0.3);
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.animate-dash {
+  stroke-dasharray: 10;
+  animation: dash 1s linear infinite;
+}
+
+.animate-dash-fast {
+  stroke-dasharray: 10;
+  animation: dash 0.5s linear infinite;
+}
+
+.animate-dash-slow {
+  stroke-dasharray: 10;
+  animation: dash 2s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
