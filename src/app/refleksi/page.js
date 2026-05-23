@@ -28,9 +28,9 @@ export default function RefleksiPage() {
   };
 
   return (
-    <main className="relative w-full min-h-screen bg-green-50 overflow-x-hidden font-quicksand flex flex-col items-center p-4 md:p-8 pb-32 md:pt-10">
+    <main className="relative w-full min-h-screen min-h-[100dvh] bg-green-50 overflow-x-hidden font-quicksand flex flex-col items-center p-4 md:p-8 pb-32 md:pt-10">
       {/* Background Image */}
-      <div className="fixed inset-0 z-0">
+      <div className="pointer-events-none fixed inset-0 z-0">
         <Image 
           src="/bg-nature.png" 
           alt="Nature Background" 

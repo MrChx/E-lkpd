@@ -28,7 +28,7 @@ export default function Home() {
     }
     // Save to session storage just in case we need it later
     sessionStorage.setItem("siswaData", JSON.stringify(formData));
-    router.push("/petunjuk");
+    router.push("/capaian");
   };
   return (
     <main className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-x-hidden bg-green-50 px-4 py-8 font-fredoka sm:px-6 md:py-12">

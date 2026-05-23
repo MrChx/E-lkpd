@@ -30,9 +30,9 @@ export default function AnalisisPage() {
   };
 
   return (
-    <main className="relative w-full min-h-screen bg-green-50 overflow-x-hidden font-quicksand flex flex-col items-center p-4 md:p-8 pb-32">
+    <main className="relative w-full min-h-screen min-h-[100dvh] bg-green-50 overflow-x-hidden font-quicksand flex flex-col items-center p-4 md:p-8 pb-32">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="pointer-events-none absolute inset-0 z-0">
         <Image 
           src="/bg-nature.png" 
           alt="Nature Background" 

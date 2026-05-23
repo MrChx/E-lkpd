@@ -21,7 +21,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="id" className={`${fredoka.variable} ${quicksand.variable} antialiased`}>
-      <body className="min-h-screen flex flex-col font-quicksand overflow-x-hidden">
+      <body className="font-quicksand overflow-x-hidden">
         {children}
       </body>
     </html>

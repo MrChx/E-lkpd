@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function PetunjukPage() {
   const instructions = [
@@ -29,9 +29,9 @@ export default function PetunjukPage() {
   ];
 
   return (
-    <main className="relative w-full min-h-screen bg-green-50 overflow-x-hidden font-quicksand flex flex-col items-center p-4 pb-32 md:pt-10">
+    <main className="relative w-full min-h-screen min-h-[100dvh] bg-green-50 font-quicksand flex flex-col items-center p-4 pb-32 md:pt-10">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="pointer-events-none fixed inset-0 z-0">
         <Image 
           src="/bg-nature.png" 
           alt="Nature Background" 
@@ -72,6 +72,16 @@ export default function PetunjukPage() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Previous Page Button */}
+      <div className="fixed bottom-6 left-6 z-20">
+        <Link 
+          href="/materi-fotosintesis" 
+          className="flex items-center justify-center bg-green-600 hover:bg-green-500 text-white p-4 md:p-5 rounded-full border-4 border-white btn-3d-circle transition-all"
+        >
+          <ArrowLeft size={40} strokeWidth={3} />
+        </Link>
       </div>
 
       {/* Next Page Button */}
