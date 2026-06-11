@@ -14,8 +14,8 @@ export default function SimulasiPage() {
   const [h2o, setH2o] = useState(2);
   const [lightOn, setLightOn] = useState(true);
 
-  const changeCO2 = (d) => { if (!lightOn) return; setCo2(Math.max(1, Math.min(3, co2 + d))); };
-  const changeH2O = (d) => { if (!lightOn) return; setH2o(Math.max(1, Math.min(3, h2o + d))); };
+  const changeCO2 = (d) => { if (!lightOn) return; setCo2(Math.max(1, Math.min(10, co2 + d))); };
+  const changeH2O = (d) => { if (!lightOn) return; setH2o(Math.max(1, Math.min(10, h2o + d))); };
 
   return (
     <div className="sim-root">
@@ -197,22 +197,72 @@ export default function SimulasiPage() {
             <text x="475" y="85" textAnchor="middle" fontSize="11" fontWeight="800" fill="#b3e5fc" style={{ fontFamily: 'Quicksand' }}>O₂</text>
             <text x="475" y="98" textAnchor="middle" fontSize="9" fontWeight="700" fill="#81d4fa" style={{ fontFamily: 'Quicksand' }}>(Oksigen)</text>
 
-            {/* Glukosa output — hexagon-ish circles (bottom right) */}
+            {/* Hasil Fotosintesis: Glukosa (Jingga) & Fruktosa (Ungu) Berselang-seling */}
             <g>
+              {/* === LEVEL 1 (CO2 >= 1) === */}
+              {/* 1. Glukosa */}
               <g style={{ display: co2 >= 1 ? '' : 'none', animation: 'sim-floatDown 3s ease-in-out infinite 0.6s' }}>
-                <circle cx="470" cy="240" r="24" fill="#FF8F00" opacity="0.92" />
-                <text x="470" y="237" textAnchor="middle" className="sim-mol-label" fontSize="9" fill="white">Glukosa</text>
-                <text x="470" y="249" textAnchor="middle" className="sim-mol-label" fontSize="7" fill="#FFF9C4">C₆H₁₂O₆</text>
+                <circle cx="460" cy="230" r="23" fill="#FF8F00" opacity="0.92" />
+                <text x="460" y="227" textAnchor="middle" className="sim-mol-label" fontSize="9" fill="white">Glukosa</text>
+                <text x="460" y="239" textAnchor="middle" className="sim-mol-label" fontSize="7" fill="#FFF9C4">C₆H₁₂O₆</text>
               </g>
+              {/* 2. Fruktosa */}
+              <g style={{ display: co2 >= 1 ? '' : 'none', animation: 'sim-floatDown 3s ease-in-out infinite 1.2s' }}>
+                <circle cx="520" cy="210" r="21" fill="#9C27B0" opacity="0.92" />
+                <text x="520" y="207" textAnchor="middle" className="sim-mol-label" fontSize="9" fill="white">Fruktosa</text>
+                <text x="520" y="219" textAnchor="middle" className="sim-mol-label" fontSize="7" fill="#E1BEE7">C₆H₁₂O₆</text>
+              </g>
+
+              {/* === LEVEL 2 (CO2 >= 2) === */}
+              {/* 3. Glukosa */}
+              <g style={{ display: co2 >= 2 ? '' : 'none', animation: 'sim-floatDown 3s ease-in-out infinite 1.8s' }}>
+                <circle cx="490" cy="265" r="19" fill="#FFA000" opacity="0.85" />
+                <text x="490" y="263" textAnchor="middle" className="sim-mol-label" fontSize="8" fill="white">Glukosa</text>
+                <text x="490" y="273" textAnchor="middle" className="sim-mol-label" fontSize="6" fill="#FFF9C4">C₆H₁₂O₆</text>
+              </g>
+              {/* 4. Fruktosa */}
+              <g style={{ display: co2 >= 2 ? '' : 'none', animation: 'sim-floatDown 3s ease-in-out infinite 2.4s' }}>
+                <circle cx="550" cy="245" r="18" fill="#BA68C8" opacity="0.85" />
+                <text x="550" y="242" textAnchor="middle" className="sim-mol-label" fontSize="8" fill="white">Fruktosa</text>
+                <text x="550" y="252" textAnchor="middle" className="sim-mol-label" fontSize="6" fill="#E1BEE7">C₆H₁₂O₆</text>
+              </g>
+              {/* 5. Glukosa */}
+              <g style={{ display: co2 >= 2 ? '' : 'none', animation: 'sim-floatDown 3s ease-in-out infinite 1.0s' }}>
+                <circle cx="430" cy="215" r="16" fill="#FF8F00" opacity="0.87" />
+                <text x="430" y="212" textAnchor="middle" className="sim-mol-label" fontSize="7" fill="white">Glukosa</text>
+                <text x="430" y="222" textAnchor="middle" className="sim-mol-label" fontSize="5.5" fill="#FFF9C4">C₆H₁₂O₆</text>
+              </g>
+              {/* 6. Fruktosa */}
               <g style={{ display: co2 >= 2 ? '' : 'none', animation: 'sim-floatDown 3s ease-in-out infinite 1.5s' }}>
-                <circle cx="500" cy="270" r="20" fill="#FFA000" opacity="0.85" />
-                <text x="500" y="268" textAnchor="middle" className="sim-mol-label" fontSize="8" fill="white">Glukosa</text>
-                <text x="500" y="278" textAnchor="middle" className="sim-mol-label" fontSize="6" fill="#FFF9C4">C₆H₁₂O₆</text>
+                <circle cx="580" cy="195" r="15" fill="#8E24AA" opacity="0.87" />
+                <text x="580" y="192" textAnchor="middle" className="sim-mol-label" fontSize="7" fill="white">Fruktosa</text>
+                <text x="580" y="202" textAnchor="middle" className="sim-mol-label" fontSize="5.5" fill="#E1BEE7">C₆H₁₂O₆</text>
               </g>
+
+              {/* === LEVEL 3 (CO2 >= 3) === */}
+              {/* 7. Glukosa */}
+              <g style={{ display: co2 >= 3 ? '' : 'none', animation: 'sim-floatDown 3s ease-in-out infinite 2.8s' }}>
+                <circle cx="410" cy="250" r="17" fill="#FF8F00" opacity="0.88" />
+                <text x="410" y="247" textAnchor="middle" className="sim-mol-label" fontSize="7" fill="white">Glukosa</text>
+                <text x="410" y="256" textAnchor="middle" className="sim-mol-label" fontSize="5.5" fill="#FFF9C4">C₆H₁₂O₆</text>
+              </g>
+              {/* 8. Fruktosa */}
+              <g style={{ display: co2 >= 3 ? '' : 'none', animation: 'sim-floatDown 3s ease-in-out infinite 0.9s' }}>
+                <circle cx="500" cy="175" r="16" fill="#9C27B0" opacity="0.88" />
+                <text x="500" y="172" textAnchor="middle" className="sim-mol-label" fontSize="7" fill="white">Fruktosa</text>
+                <text x="500" y="181" textAnchor="middle" className="sim-mol-label" fontSize="5.5" fill="#E1BEE7">C₆H₁₂O₆</text>
+              </g>
+              {/* 9. Glukosa */}
               <g style={{ display: co2 >= 3 ? '' : 'none', animation: 'sim-floatDown 3s ease-in-out infinite 2.2s' }}>
-                <circle cx="445" cy="275" r="18" fill="#FF8F00" opacity="0.88" />
-                <text x="445" y="273" textAnchor="middle" className="sim-mol-label" fontSize="7" fill="white">Glukosa</text>
-                <text x="445" y="282" textAnchor="middle" className="sim-mol-label" fontSize="5.5" fill="#FFF9C4">C₆H₁₂O₆</text>
+                <circle cx="470" cy="295" r="18" fill="#FFA000" opacity="0.83" />
+                <text x="470" y="292" textAnchor="middle" className="sim-mol-label" fontSize="7.5" fill="white">Glukosa</text>
+                <text x="470" y="301" textAnchor="middle" className="sim-mol-label" fontSize="5.5" fill="#FFF9C4">C₆H₁₂O₆</text>
+              </g>
+              {/* 10. Fruktosa */}
+              <g style={{ display: co2 >= 3 ? '' : 'none', animation: 'sim-floatDown 3s ease-in-out infinite 1.4s' }}>
+                <circle cx="535" cy="280" r="17" fill="#BA68C8" opacity="0.83" />
+                <text x="535" y="277" textAnchor="middle" className="sim-mol-label" fontSize="7.5" fill="white">Fruktosa</text>
+                <text x="535" y="286" textAnchor="middle" className="sim-mol-label" fontSize="5.5" fill="#E1BEE7">C₆H₁₂O₆</text>
               </g>
             </g>
 

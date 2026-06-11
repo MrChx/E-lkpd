@@ -242,7 +242,7 @@ export default function EvaluasiPage() {
       {/* Floating Navigation Buttons */}
       <div className="fixed bottom-6 left-6 z-20">
         <Link
-          href="/materi"
+          href="/analisis"
           className="flex items-center justify-center bg-green-600 hover:bg-green-500 text-white p-4 md:p-5 rounded-full border-4 border-white btn-3d-circle transition-all"
         >
           <ArrowLeft size={40} strokeWidth={3} />

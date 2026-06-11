@@ -29,14 +29,11 @@ export default function CapaianPage() {
         {/* Content Text */}
         <div className="text-base md:text-lg leading-relaxed text-slate-700 text-justify space-y-4">
           <p>
-            Pada akhir fase F, peserta didik memiliki kemampuan mendeskripsikan
-            struktur sel serta bioproses yang terjadi seperti transpor membran dan
-            pembelahan sel; menganalisis keterkaitan struktur organ pada sistem organ
-            dengan fungsinya serta kelainan atau gangguan yang muncul pada sistem organ
-            tersebut; memahami fungsi enzim dan mengenal proses metabolisme yang terjadi
-            dalam tubuh; serta memiliki kemampuan menerapkan konsep pewarisan sifat,
-            pertumbuhan dan perkembangan, mengevaluasi gagasan baru mengenai evolusi,
-            dan inovasi teknologi biologi.
+            Mengaitkan hubungan antara struktur dan fungsi organel
+            di dalam sel; menerapkan prinsip-prinsip bioproses yang
+            terjadi di dalam sel; menganalisis keterkaitan antar sistem
+            organ dalam tubuh untuk merespons stimulus internal dan
+            eksternal
           </p>
         </div>
       </div>

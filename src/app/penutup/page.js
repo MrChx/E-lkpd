@@ -26,7 +26,7 @@ Kelas: ${siswa.kelas}
 *1. APERSEPSI*
 • Mengapa tumbuhan membutuhkan cahaya matahari?
 Jawaban: ${apersepsi.q1}
-• Di bagian manakah tumbuhan menangkap cahaya matahari?
+• Dari mana tumbuhan mendapatkan makanannya?
 Jawaban: ${apersepsi.q2}
 
 *2. ANALISIS SIMULASI*

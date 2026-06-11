@@ -93,11 +93,10 @@ export default function MateriFotosintesisPage() {
 
             {/* Infografis Image */}
             <div className="relative w-full aspect-[4/3] md:aspect-[16/10]">
-              <Image
-                src="/infografis-fotosintesis.png"
+              <img
+                src="/infografis-fotosintesis.jpeg?v=1"
                 alt="Infografis Fotosintesis"
-                fill
-                className="object-contain rounded-2xl"
+                className="w-full h-full object-contain rounded-2xl"
               />
             </div>
           </div>

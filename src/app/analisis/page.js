@@ -166,7 +166,7 @@ export default function AnalisisPage() {
       <div className="fixed bottom-6 right-6 z-20">
         {isSubmitted ? (
           <Link 
-            href="/materi" 
+            href="/evaluasi" 
             className="flex items-center justify-center bg-green-600 hover:bg-green-500 text-white p-4 md:p-5 rounded-full border-4 border-white btn-3d-circle transition-all"
           >
             <ArrowRight size={40} strokeWidth={3} />
