@@ -9,7 +9,7 @@ export default function TujuanPage() {
     {
       icon: <BookOpen className="text-emerald-600 w-6 h-6 md:w-7 md:h-7" strokeWidth={2.5} />,
       kko: "Menjelaskan",
-      desc: "hubungan antara struktur kloroplas dan fungsinya dalam proses fotosintesis.",
+      desc: "hubungan antara organel-organel sel dan fungsinya dalam proses fotosintesis.",
       bg: "from-emerald-50 to-teal-50 border-emerald-100"
     },
     {

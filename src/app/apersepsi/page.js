@@ -25,9 +25,9 @@ export default function ApersepsiPage() {
     <main className="relative w-full min-h-screen min-h-[100dvh] bg-green-50 overflow-x-hidden font-quicksand flex flex-col items-center p-4 pb-32">
       {/* Background Image */}
       <div className="pointer-events-none fixed inset-0 z-0">
-        <Image 
-          src="/bg-nature.png" 
-          alt="Nature Background" 
+        <Image
+          src="/bg-nature.png"
+          alt="Nature Background"
           fill
           priority
           className="object-cover object-center opacity-60"
@@ -36,7 +36,7 @@ export default function ApersepsiPage() {
 
       {/* Main Content Card */}
       <div className="relative z-10 w-full max-w-4xl bg-white/95 backdrop-blur-sm border-2 border-green-200 shadow-2xl rounded-[2rem] p-6 md:p-10 pt-12 mt-8 mb-24">
-        
+
         {/* Title Badge */}
         <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-green-700 text-white font-fredoka font-bold tracking-wide text-xl md:text-3xl py-3 px-12 rounded-full shadow-lg border-4 border-white whitespace-nowrap">
           Apersepsi
@@ -64,12 +64,12 @@ export default function ApersepsiPage() {
                 className="w-full border-2 border-green-300 rounded-xl p-3 md:p-4 outline-none focus:border-green-500 focus:ring-2 focus:ring-green-200 transition-all resize-none disabled:bg-gray-100"
                 rows="2"
               ></textarea>
-              
+
               {/* Answer Feedback 1 */}
               {isSubmitted && (
                 <div className="mt-2 bg-green-100 border border-green-400 text-green-900 p-4 rounded-xl text-sm md:text-base leading-relaxed">
                   <span className="font-bold block mb-1">💡 Penjelasan:</span>
-                  Energi matahari sangat penting bagi tumbuhan karena merupakan sumber utama untuk proses fotosintesis, yaitu mekanisme pembuatan makanan sendiri (glukosa) menggunakan cahaya, air, dan karbon dioksida. Tanpa cahaya matahari, tumbuhan tidak dapat memproduksi energi untuk tumbuh, berkembang biak, mengatur suhu, serta menghasilkan warna hijau daun.
+                  Energi matahari sangat penting bagi tumbuhan karena merupakan sumber utama untuk proses fotosintesis, yaitu mekanisme pembuatan makanan sendiri (glukosa) menggunakan cahaya, air, dan karbon dioksida. Tanpa cahaya matahari, tumbuhan tidak dapat memproduksi energi untuk tumbuh.
                 </div>
               )}
             </div>
@@ -106,7 +106,7 @@ export default function ApersepsiPage() {
           {/* Submit Button */}
           {!isSubmitted && (
             <div className="flex justify-center mt-4">
-              <button 
+              <button
                 type="submit"
                 className="bg-green-600 hover:bg-green-500 text-white font-bold text-lg md:text-xl py-3 px-8 rounded-full border-2 border-white btn-3d tracking-wide transition-all"
               >
@@ -119,8 +119,8 @@ export default function ApersepsiPage() {
 
       {/* Navigation Buttons */}
       <div className="fixed bottom-6 left-6 z-20">
-        <Link 
-          href="/petunjuk" 
+        <Link
+          href="/petunjuk"
           className="flex items-center justify-center bg-green-600 hover:bg-green-500 text-white p-4 md:p-5 rounded-full border-4 border-white btn-3d-circle transition-all"
         >
           <ArrowLeft size={40} strokeWidth={3} />
@@ -129,14 +129,14 @@ export default function ApersepsiPage() {
 
       <div className="fixed bottom-6 right-6 z-20">
         {isSubmitted ? (
-          <Link 
-            href="/simulasi" 
+          <Link
+            href="/simulasi"
             className="flex items-center justify-center bg-green-600 hover:bg-green-500 text-white p-4 md:p-5 rounded-full border-4 border-white btn-3d-circle transition-all"
           >
             <ArrowRight size={40} strokeWidth={3} />
           </Link>
         ) : (
-          <button 
+          <button
             onClick={() => setShowWarning(true)}
             className="flex items-center justify-center bg-gray-400 text-white p-4 md:p-5 rounded-full border-4 border-white btn-3d-circle transition-all opacity-80"
           >
@@ -156,7 +156,7 @@ export default function ApersepsiPage() {
             <p className="text-slate-600 mb-6 font-medium text-sm md:text-base">
               Harap isi kedua jawaban terlebih dahulu sebelum melanjutkan ya!
             </p>
-            <button 
+            <button
               onClick={() => setShowWarning(false)}
               className="w-full bg-green-600 hover:bg-green-500 text-white font-bold py-3 rounded-xl border-2 border-green-700 shadow-[0_4px_0_0_#15803d] active:shadow-[0_0px_0_0_#15803d] active:translate-y-1 transition-all"
             >

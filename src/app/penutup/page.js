@@ -80,7 +80,7 @@ Terima kasih Bapak/Ibu!`;
             Fotosintesis adalah proses penting bagi kehidupan.
           </p>
           <p>
-            Tumbuhan menghasilkan makanan sendiri dengan bantuan cahaya matahari, air, dan CO₂.
+            Tumbuhan menghasilkan makanan sendiri dengan bantuan cahaya matahari, air, pigmen fotosintesis (klorofil), hidrogen, enzim, dan CO₂.
           </p>
           <p>
             Oksigen yang dihasilkan sangat dibutuhkan oleh makhluk hidup.

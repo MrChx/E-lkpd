@@ -29,7 +29,7 @@ export default function GelapScreen({ active, onBack }) {
             <circle cx="680" cy="5" r="1" /><circle cx="30" cy="200" r="1" /><circle cx="750" cy="180" r="1" />
           </g>
 
-          <text x="380" y="245" textAnchor="middle" fontSize="11" fontWeight="700" fill="#7986CB" opacity="0.7">STROMA KLOROPLAS</text>
+          <text x="380" y="245" textAnchor="middle" fontSize="11" fontWeight="700" fill="#7986CB" opacity="0.7"></text>
 
           {/* CO₂ */}
           <g style={{ animation: 'sim-co2Enter 2s ease-in-out infinite' }}>
